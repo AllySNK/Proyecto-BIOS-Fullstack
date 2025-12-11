@@ -1,0 +1,153 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(100, 100, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(100, 100, 233, 1) 1%,
+    rgba(245, 226, 78, 1) 100%
+  );
+  color: white;
+  max-width: 900px;
+  padding: 1rem;
+  margin: 3rem auto;
+}
+
+.new-task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bttn {
+  background: hsla(330, 100%, 76%, 0.432);
+  border: 1px solid hsl(325, 96%, 79%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  padding: 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.bttn:hover,
+.bttn:focus-visible {
+  background: hsla(327, 100%, 62%, 0.322);
+}
+
+.bttn.bttn-delete {
+  background: hsla(263, 100%, 40%, 0.205);
+  border: 1px solid hsl(261, 100%, 50%);
+  color: hsl(261, 100%, 50%);
+}
+
+.bttn.bttn-delete:hover,
+.bttn.bttn-delete:focus-visible {
+  background: hsla(261, 93%, 27%, 0.308);
+}
+
+.new-task input {
+  outline: none;
+  border: 1px solid hsla(261, 100%, 68%, 0.877);
+  background: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: hsl(0, 0%, 0%);
+}
+
+.new-task input:focus {
+  border: 1px solid hsl(258, 100%, 50%);
+}
+
+.header {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  color: rgb(248, 186, 220);
+  text-decoration: underline;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.list li:has(input:checked) label {
+  color: hsla(0, 0%, 100%, 0.377);
+  text-decoration: line-through;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.list li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.list li label {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(261, 89%, 64%);
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsla(328, 92%, 90%, 0.856);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: hsl(332, 100%, 79%);
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: hsl(44, 100%, 62%);
+  color: hsla(0, 0%, 0%, 0.733);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: hsl(261, 82%, 57%);
+}
