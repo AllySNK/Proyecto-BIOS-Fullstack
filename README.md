@@ -15,6 +15,8 @@ Para iniciar el proyecto se necesitan las dependencias:
 
 Para bajarlo desde GitHub, sólo tenés que clonar el repositorio con git clone + URL del depo, entrar a las carpetas /backend y /src (frontend), instalar las dependencias mencionadas arriba y ejecutar ambos servidores para tener la aplicación funcionando localmente.
 
+Para probar esta API en Postman, simplemente abrís una nueva request, elegís el método correspondiente (GET para obtener tareas, POST para crear, PUT para actualizar y DELETE para borrar) y escribís la URL del backend, en mi caso http://localhost:5000/todos o http://localhost:5000/todos/[id de la tarea] si usás POST o PUT, vas a Body -> raw -> JSON y enviás un dato como { "title": "Tarea" }, luego clickeás Send y verificás el código de respuesta y el JSON que devuelve el backend para confirmar que todo funciona correctamente.
+
 Espero sea de su agrado y quedo a las órdenes por cualquier consulta y/o críticas/comentarios que puedan ayudarme a mejorarlo!
 
 Gracias por su atención--
